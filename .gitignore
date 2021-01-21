@@ -7,3 +7,7 @@ dist
 build
 .vscode
 .env
+
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
