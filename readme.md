@@ -1,22 +1,24 @@
 # ethkit CLI
 
-A CLI for ethkit.
+All-in-one Ethereum utility tool box
 
-## Customizing your CLI
+Note: this project is still under development 🚧
 
-Check out the documentation at https://github.com/infinitered/gluegun/tree/master/docs.
+![](https://cdn.jsdelivr.net/gh/wuwe1/ethkit/static/demo.svg)
 
-## Publishing to NPM
+# Usage
 
-To package your CLI up for NPM, do this:
+```
+ethkit version 0.0.1
 
-```shell
-$ npm login
-$ npm whoami
-$ npm lint
-$ npm test
-(if typescript, run `npm run build` here)
-$ npm publish
+  ethkit                         -                                                        
+  mappingIndex (mapi)            calculate mapping storage index by key and position      
+  mkContractAddress (mkca)       calculate contract address by sender and nonce           
+  signature (sig)                function signature                                       
+  storageAt (st)                 getStorageAt                                             
+  uniswapGetAmountOut (uniout)   uniswap getAmountOut <amountIn> <reverseIn> <reserveOut> 
+  help (h)                       -                                                        
+  version (v)                    Output the version number        
 ```
 
 # License

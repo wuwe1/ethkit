@@ -9,7 +9,9 @@ const strip = s => {
 const clean = s => {
   const functionName = s.match(/(\w+)\(.*\)/)[1]
   let args = strip(s.match(/\((.*)\)/)[1])
-  const argTypes = args.split(',').map(arg => arg.split(' ')[0])
+  const argTypes = args.split(',').map(arg => {
+    return strip(arg).split(' ')[0]
+  })
   for (let i = 0; i < argTypes.length; i++) {
     const t = argTypes[i]
     argTypes[i] = typeMap.get(t) || t
