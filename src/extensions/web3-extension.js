@@ -21,7 +21,13 @@ module.exports = toolbox => {
     return '0x' + web3.utils.sha3(rlp.encode([sender, nonce])).slice(26) // 12 + 14
   }
 
+  const call = (callObj) => {
+    return web3.eth.call(callObj)
+  }
+
   toolbox.web3 = {
+    utils: web3.utils,
+    call,
     toChecksumAddress,
     getStorageAt,
     encodeFunctionSignature,
