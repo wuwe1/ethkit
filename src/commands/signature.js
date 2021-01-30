@@ -31,7 +31,7 @@ module.exports = {
 
     const argCleaned = clean(arg)
 
-    const sig = web3.encodeFunctionSignature(argCleaned)
+    const sig = web3.eth.abi.encodeFunctionSignature(argCleaned)
     print.info(`${sig} <= ${argCleaned}`)
   }
 }
