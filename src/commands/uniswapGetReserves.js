@@ -35,7 +35,7 @@ module.exports = {
   alias: ['unires'],
   description: '<pair address>',
   run: async toolbox => {
-    const { parameters, web3, print } = toolbox
+    const { parameters, web3 } = toolbox
     let pair = parameters.first
     
     if (pair === undefined) pair = await ask('pair')
@@ -63,7 +63,7 @@ module.exports = {
     const [symbol0, decimals0] = await getTokenInfo(web3, token0)
     const [symbol1, decimals1] = await getTokenInfo(web3, token1)
 
-    print.info(`${symbol0}: ${Number(_reserve0) / 10 ** decimals0}`)
-    print.info(`${symbol1}: ${Number(_reserve1) / 10 ** decimals1}`)
+    console.log(`${symbol0}: ${Number(_reserve0) / 10 ** decimals0}`)
+    console.log(`${symbol1}: ${Number(_reserve1) / 10 ** decimals1}`)
   }
 }

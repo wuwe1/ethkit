@@ -1,5 +1,7 @@
 const { build } = require('gluegun')
-require('dotenv').config()
+const path = require('path')
+const ENV_PATH = path.resolve(__dirname, '../', '.env')
+require('dotenv').config({path: ENV_PATH})
 
 /**
  * Create the cli and kick it off
