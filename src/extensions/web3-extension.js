@@ -5,7 +5,8 @@ const web3 = new Web3(httpProvider || '')
 
 module.exports = toolbox => {
   const calculateContractAddress = (sender, nonce) => {
-    return '0x' + web3.utils.sha3(rlp.encode([sender, nonce])).slice(26) // 12 + 14
+    const address = '0x' + web3.utils.sha3(rlp.encode([sender, nonce])).slice(26) // 12 + 14
+    return web3.utils.toChecksumAddress(address)
   }
 
   toolbox.web3 = {
