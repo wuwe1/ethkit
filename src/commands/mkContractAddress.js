@@ -11,7 +11,8 @@ module.exports = {
 
     if (sender === undefined) sender = await ask('sender')
     if (nonce === undefined) nonce = await ask('nonce')
-    const result = web3.calculateContractAddress(sender, nonce)
+    let result = web3.calculateContractAddress(sender, nonce)
+    result = web3.utils.toChecksumAddress(result)
     print.info(result)
   }
 }

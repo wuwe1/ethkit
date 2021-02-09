@@ -38,7 +38,7 @@ const getTokenInfo = async (web3, token) => {
 
 module.exports = {
   name: 'ERC20Info',
-  alias: ['info'],
+  alias: ['tinfo'],
   description: '<address> get basic info of ERC20 token',
   run: async toolbox => {
     const { parameters, web3, print } = toolbox
